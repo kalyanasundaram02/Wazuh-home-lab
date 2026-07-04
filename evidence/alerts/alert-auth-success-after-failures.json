@@ -1,0 +1,99 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.07.04",
+  "_id": "XX38LZ8BEr6cSpWaqj7i",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "Ubuntu",
+      "program_name": "sshd",
+      "timestamp": "Jul 04 16:35:57"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "name": "Ubuntu",
+      "id": "000"
+    },
+    "manager": {
+      "name": "Ubuntu"
+    },
+    "data": {
+      "srcip": "192.168.0.7",
+      "dstuser": "sanjay",
+      "srcport": "35670"
+    },
+    "rule": {
+      "mail": true,
+      "level": 12,
+      "pci_dss": [
+        "10.2.4",
+        "10.2.5",
+        "11.4"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Multiple authentication failures followed by a success.",
+      "groups": [
+        "syslog",
+        "attacks"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7",
+        "SI.4"
+      ],
+      "frequency": 2,
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ],
+      "firedtimes": 8,
+      "mitre": {
+        "technique": [
+          "Valid Accounts",
+          "Brute Force"
+        ],
+        "id": [
+          "T1078",
+          "T1110"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Persistence",
+          "Privilege Escalation",
+          "Initial Access",
+          "Credential Access"
+        ]
+      },
+      "id": "40112",
+      "gpg13": [
+        "7.1",
+        "7.8"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "parent": "sshd",
+      "name": "sshd"
+    },
+    "id": "1783182959.2634626",
+    "full_log": "Jul 04 16:35:57 Ubuntu sshd[11037]: Accepted password for sanjay from 192.168.0.7 port 35670 ssh2",
+    "timestamp": "2026-07-04T22:05:59.081+0530"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-07-04T16:35:59.081Z"
+    ]
+  },
+  "sort": [
+    1783182959081
+  ]
+}

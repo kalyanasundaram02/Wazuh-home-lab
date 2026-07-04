@@ -1,0 +1,94 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.07.04",
+  "_id": "rn34LZ8BEr6cSpWagz3b",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "name": "Ubuntu",
+      "id": "000"
+    },
+    "manager": {
+      "name": "Ubuntu"
+    },
+    "data": {
+      "ip_v": "4",
+      "in_iface": "enp0s3",
+      "src_ip": "192.168.0.7",
+      "src_port": "44969",
+      "event_type": "alert",
+      "alert": {
+        "severity": "2",
+        "signature_id": "2010935",
+        "rev": "3",
+        "metadata": {
+          "updated_at": [
+            "2019_07_26"
+          ],
+          "confidence": [
+            "Medium"
+          ],
+          "created_at": [
+            "2010_07_30"
+          ],
+          "signature_severity": [
+            "Informational"
+          ]
+        },
+        "gid": "1",
+        "signature": "ET SCAN Suspicious inbound to MSSQL port 1433",
+        "action": "allowed",
+        "category": "Potentially Bad Traffic"
+      },
+      "flow_id": "754433455287450.000000",
+      "dest_ip": "192.168.0.100",
+      "proto": "TCP",
+      "dest_port": "1433",
+      "pkt_src": "wire/pcap",
+      "flow": {
+        "src_ip": "192.168.0.7",
+        "src_port": "44969",
+        "pkts_toserver": "1",
+        "dest_ip": "192.168.0.100",
+        "start": "2026-07-04T21:39:22.896551+0530",
+        "bytes_toclient": "0",
+        "bytes_toserver": "58",
+        "pkts_toclient": "0",
+        "dest_port": "1433"
+      },
+      "timestamp": "2026-07-04T21:39:22.896551+0530",
+      "direction": "to_server"
+    },
+    "rule": {
+      "firedtimes": 3,
+      "mail": false,
+      "level": 3,
+      "description": "Suricata: Alert - ET SCAN Suspicious inbound to MSSQL port 1433",
+      "groups": [
+        "ids",
+        "suricata"
+      ],
+      "id": "86601"
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "json"
+    },
+    "id": "1783182685.2393023",
+    "timestamp": "2026-07-04T22:01:25.911+0530"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-07-04T16:31:25.911Z"
+    ],
+    "data.timestamp": [
+      "2026-07-04T16:09:22.896Z"
+    ]
+  },
+  "sort": [
+    1783182685911
+  ]
+}

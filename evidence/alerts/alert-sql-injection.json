@@ -1,0 +1,115 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.07.05",
+  "_id": "ueiVM58BYcbuOT2puLOv",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "name": "Ubuntu",
+      "id": "000"
+    },
+    "manager": {
+      "name": "Ubuntu"
+    },
+    "data": {
+      "tx_id": "0",
+      "app_proto": "http",
+      "ip_v": "4",
+      "in_iface": "enp0s3",
+      "src_ip": "192.168.0.100",
+      "src_port": "80",
+      "event_type": "alert",
+      "alert": {
+        "severity": "2",
+        "signature_id": "2016672",
+        "rev": "5",
+        "metadata": {
+          "updated_at": [
+            "2024_03_06"
+          ],
+          "created_at": [
+            "2013_03_27"
+          ],
+          "signature_severity": [
+            "Minor"
+          ]
+        },
+        "gid": "1",
+        "signature": "ET WEB_SERVER SQL Errors in HTTP 200 Response (error in your SQL syntax)",
+        "action": "allowed",
+        "category": "Potentially Bad Traffic"
+      },
+      "ts_progress": "request_complete",
+      "flow_id": "1288169720363967.000000",
+      "dest_ip": "192.168.0.4",
+      "proto": "TCP",
+      "http": {
+        "hostname": "192.168.0.100",
+        "protocol": "HTTP/1.1",
+        "http_method": "GET",
+        "http_content_type": "text/html",
+        "http_refer": "http://192.168.0.100/DVWA/vulnerabilities/sqli/?id=1%27+UNION+SELECT+CONCAT%28table_schema%2C+%27%3A%27%2C+table_name%29%2C+NULL+FROM+information_schema.tables+--+-&Submit=Submit",
+        "length": "343",
+        "url": "/DVWA/vulnerabilities/sqli/?id=1%27+SELECT+*+FROM+%27guestbook%27+--+-&Submit=Submit",
+        "http_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+        "status": "200"
+      },
+      "files": [
+        {
+          "filename": "/DVWA/vulnerabilities/sqli/",
+          "size": 577,
+          "stored": false,
+          "state": "CLOSED",
+          "tx_id": 0,
+          "gaps": false
+        }
+      ],
+      "tc_progress": "response_complete",
+      "dest_port": "52396",
+      "pkt_src": "wire/pcap",
+      "flow": {
+        "src_ip": "192.168.0.4",
+        "src_port": "52396",
+        "pkts_toserver": "4",
+        "dest_ip": "192.168.0.100",
+        "start": "2026-07-06T00:11:08.955285+0530",
+        "bytes_toclient": "933",
+        "bytes_toserver": "974",
+        "pkts_toclient": "4",
+        "dest_port": "80"
+      },
+      "timestamp": "2026-07-06T00:11:13.968843+0530",
+      "direction": "to_client"
+    },
+    "rule": {
+      "firedtimes": 17,
+      "mail": false,
+      "level": 3,
+      "description": "Suricata: Alert - ET WEB_SERVER SQL Errors in HTTP 200 Response (error in your SQL syntax)",
+      "groups": [
+        "ids",
+        "suricata"
+      ],
+      "id": "86601"
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "json"
+    },
+    "id": "1783276875.54427",
+    "timestamp": "2026-07-06T00:11:15.401+0530"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-07-05T18:41:15.401Z"
+    ],
+    "data.timestamp": [
+      "2026-07-05T18:41:13.968Z"
+    ]
+  },
+  "sort": [
+    1783276875401
+  ]
+}
